@@ -1,0 +1,63 @@
+---
+title: Contact
+description: Get in touch for a free, no-obligation discovery call about automating your business admin.
+crumbs: []
+notice: false
+---
+<div class="intro-box">
+  <h2>Get in Touch</h2>
+  <p>
+    Tell us about your business and where the time is going. We'll come back with next steps &mdash;
+    usually within one working day.
+  </p>
+</div>
+
+<div class="card-grid" style="grid-template-columns: 2fr 1fr; align-items:start;">
+  <form class="panel-form" action="https://formspree.io/f/{{ site.formspree_id }}" method="POST" id="contact-form">
+    <input type="hidden" name="_subject" value="New enquiry from website">
+    <input type="hidden" name="_next" value="{{ site.url }}{{ '/thank-you/' | relative_url }}">
+    <label for="c-name">Name</label>
+    <input type="text" id="c-name" name="name" required>
+
+    <label for="c-email">Email</label>
+    <input type="email" id="c-email" name="email" required>
+
+    <label for="c-company">Company <span class="hint">(optional)</span></label>
+    <input type="text" id="c-company" name="company">
+
+    <label for="c-service">What are you interested in?</label>
+    <select id="c-service" name="service">
+      <option value="General enquiry">General enquiry</option>
+      <option value="Finance & Cash Flow">Finance &amp; Cash Flow</option>
+      <option value="Admin & Operations">Admin &amp; Operations</option>
+      <option value="Sales & Lead Management">Sales &amp; Lead Management</option>
+      <option value="Marketing & Content">Marketing &amp; Content</option>
+      <option value="Customer Support">Customer Support</option>
+      <option value="HR & Recruitment">HR &amp; Recruitment</option>
+      <option value="E-commerce & Retail">E-commerce &amp; Retail</option>
+      <option value="Consulting & Advisory">Consulting &amp; Advisory</option>
+      <option value="Tutoring">Tutoring</option>
+      <option value="A specific package">A specific package</option>
+      <option value="Digital products / shop">Digital products / shop</option>
+    </select>
+
+    <label for="c-message">Message</label>
+    <textarea id="c-message" name="message" required placeholder="What's taking up your time at the moment?"></textarea>
+
+    <button type="submit" class="btn btn-primary">Send Enquiry &raquo;</button>
+  </form>
+
+  <div class="card">
+    <h3>Prefer to talk?</h3>
+    <p>Book a free 20-minute discovery call directly into the calendar.</p>
+    <a class="btn" href="https://calendly.com/YOUR-HANDLE" target="_blank" rel="noopener">Book a call &raquo;</a>
+    <h3 style="margin-top:14px;">Or reach us directly</h3>
+    <p>Email: <a href="mailto:hello@YOURDOMAIN.co.uk">hello@YOURDOMAIN.co.uk</a></p>
+  </div>
+</div>
+
+<div class="note-box">
+  <strong>Note:</strong> We reply within one working day. For the free Admin Time Audit specifically, use
+  the <a href="{{ '/free-audit/' | relative_url }}">dedicated audit form</a> instead &mdash; it asks a couple of extra
+  questions that help us prep.
+</div>

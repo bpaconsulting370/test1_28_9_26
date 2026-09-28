@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+{% seo %}
+{% if page.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
+<link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to Main Content</a>
+
+{% include header.html %}
+{% include nav.html %}
+
+{% if page.notice %}
+<div class="notice-bar">
+  <span class="tag">NEW</span>
+  <marquee behavior="scroll" direction="left" scrollamount="3">{{ page.notice }}</marquee>
+</div>
+{% endif %}
+
+{% if page.crumbs or page.url != "/" %}
+<p class="breadcrumb">
+  <a href="{{ '/' | relative_url }}">Home</a>
+  {% for c in page.crumbs %} &gt; <a href="{{ c.url | relative_url }}">{{ c.name }}</a>{% endfor %}
+  {% if page.url != "/" and page.hide_self_crumb != true %} &gt; {{ page.title }}{% endif %}
+</p>
+{% endif %}
+
+<main id="main-content">
+{{ content }}
+</main>
+
+{% include footer.html %}
+</body>
+</html>

@@ -1,0 +1,12 @@
+<nav class="mainnav">
+  <ul>
+    <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a></li>
+    <li><a href="{{ '/services/' | relative_url }}"{% unless page.url contains '/tutoring-uk/' %}{% if page.url contains '/services/' %} aria-current="page"{% endif %}{% endunless %}>Services</a></li>
+    <li><a href="{{ '/packages/' | relative_url }}"{% if page.url contains '/packages/' %} aria-current="page"{% endif %}>Packages</a></li>
+    <li><a href="{{ '/products/' | relative_url }}"{% if page.url contains '/products/' %} aria-current="page"{% endif %}>Shop</a></li>
+    <li><a href="{{ '/services/tutoring-uk/' | relative_url }}"{% if page.url contains '/tutoring-uk/' %} aria-current="page"{% endif %}>Tutoring</a></li>
+    <li><a href="{{ '/about/' | relative_url }}"{% if page.url contains '/about/' %} aria-current="page"{% endif %}>About</a></li>
+    <li><a href="{{ '/resources/' | relative_url }}"{% if page.url contains '/resources/' %} aria-current="page"{% endif %}>Resources</a></li>
+    <li><a href="{{ '/contact/' | relative_url }}"{% if page.url contains '/contact/' %} aria-current="page"{% endif %}>Contact</a></li>
+  </ul>
+</nav>

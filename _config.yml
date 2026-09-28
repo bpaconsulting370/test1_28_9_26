@@ -1,0 +1,30 @@
+title: Business Process Automation
+description: >-
+  Automation, AI and digital services for small businesses — invoicing, admin,
+  sales, marketing and support, built around the tools you already use.
+lang: en-GB
+
+# --- Fill these in once you know them (see README.md) ---
+url: ""                    # e.g. "https://yourusername.github.io"  (no trailing slash)
+baseurl: ""                # e.g. "/your-repo-name" — leave blank for a USERNAME.github.io root repo, or a custom domain
+goatcounter_code: "YOUR-CODE"     # from https://www.goatcounter.com — your site is https://YOUR-CODE.goatcounter.com
+formspree_id: "YOUR-FORM-ID"      # from https://formspree.io — used by the contact and notify-me forms
+
+# --- GitHub Pages-safe plugins (both are on GitHub's supported plugin list) ---
+plugins:
+  - jekyll-sitemap    # auto-generates /sitemap.xml at build time
+  - jekyll-seo-tag     # auto-generates <title>, meta description and Open Graph tags per page
+
+# Default layout for any page that doesn't set its own
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Files/folders Jekyll should not try to process or publish
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - tools

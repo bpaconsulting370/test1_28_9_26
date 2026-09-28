@@ -1,0 +1,49 @@
+---
+layout: default
+---
+<div class="intro-box">
+  <h2>{{ page.title }}</h2>
+  {% if page.intro %}<p>{{ page.intro }}</p>{% endif %}
+</div>
+
+{{ content }}
+
+{% if page.layout_style == "cards" %}
+<div class="card-grid">
+  {% for item in page.items %}
+  <div class="card"{% if item.id %} id="{{ item.id }}"{% endif %}>
+    <h3>{{ item.name }}{% if item.badge %}<span class="badge badge-{{ item.badge | downcase }}">{{ item.badge }}</span>{% endif %}</h3>
+    <p>{{ item.summary }}</p>
+    {% if item.list %}
+    <ul>{% for li in item.list %}<li>{{ li }}</li>{% endfor %}</ul>
+    {% endif %}
+    {% if page.show_price != false %}
+      {% if item.status == "coming-soon" %}
+        <span class="coming-soon">Coming Soon</span>
+      {% else %}
+        <span class="price">{{ item.price | default: "POA" }}</span>
+      {% endif %}
+    {% endif %}
+    <a class="enquire" href="{{ item.url }}">{{ item.cta | default: "Learn more" }} &raquo;</a>
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<table class="services">
+  <thead><tr><th style="width:26%;">Name</th><th style="width:44%;">Description</th><th style="width:12%;">Price</th><th style="width:18%;">Action</th></tr></thead>
+  <tbody>
+    {% for item in page.items %}
+    <tr>
+      <td class="svc-name"><a href="{{ item.url }}">{{ item.name }}</a>{% if item.badge %}<span class="badge badge-{{ item.badge | downcase }}">{{ item.badge }}</span>{% endif %}</td>
+      <td>{{ item.summary }}</td>
+      <td class="price">{% if item.status == "coming-soon" %}<span class="coming-soon">Soon</span>{% else %}{{ item.price | default: "POA" }}{% endif %}</td>
+      <td class="enquire"><a href="{{ item.url }}">{{ item.cta | default: "View" }} &raquo;</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+
+{% if page.footnote %}
+<div class="note-box">{{ page.footnote }}</div>
+{% endif %}

@@ -1,0 +1,22 @@
+<footer>
+  <div class="footer-links">
+    <a href="{{ '/services/' | relative_url }}">Services</a>
+    <a href="{{ '/packages/' | relative_url }}">Packages</a>
+    <a href="{{ '/products/' | relative_url }}">Shop</a>
+    <a href="{{ '/services/tutoring-uk/' | relative_url }}">Tutoring</a>
+    <a href="{{ '/case-studies/' | relative_url }}">Case Studies</a>
+    <a href="{{ '/about/' | relative_url }}">About</a>
+    <a href="{{ '/resources/' | relative_url }}">Resources</a>
+    <a href="{{ '/contact/' | relative_url }}">Contact</a>
+    <a href="{{ '/legal/privacy-policy.html' | relative_url }}">Privacy</a>
+    <a href="{{ '/legal/terms-of-service.html' | relative_url }}">Terms</a>
+  </div>
+  <div>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All Rights Reserved.</div>
+  <div>Best viewed at 1024 x 768 resolution</div>
+  <div>Page last built: {{ site.time | date: "%-d %B %Y" }}</div>
+</footer>
+
+{% if site.goatcounter_code and site.goatcounter_code != "YOUR-CODE" %}
+<script data-goatcounter="https://{{ site.goatcounter_code }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+{% endif %}
+<script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>

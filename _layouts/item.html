@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<div class="intro-box">
+  <h2>{{ page.title }}{% if page.badge %}<span class="badge badge-{{ page.badge | downcase }}">{{ page.badge }}</span>{% endif %}</h2>
+  <p>{{ page.summary }}</p>
+</div>
+
+{{ content }}
+
+<div class="card" style="max-width:360px;">
+  {% if page.status == "coming-soon" %}
+    <h3>Status</h3>
+    <span class="coming-soon">Coming Soon</span>
+    <p>Tell us you're interested and we'll email you the moment it's live.</p>
+    <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}?service={{ page.title | url_encode }}">Get notified &raquo;</a>
+  {% elsif page.price == "FREE" %}
+    <h3>Price</h3>
+    <span class="price" style="font-size:16px;">Free</span>
+    <p>No obligation to buy anything afterwards.</p>
+    <a class="btn btn-primary" href="{{ '/free-audit/' | relative_url }}">Claim yours &raquo;</a>
+  {% else %}
+    <h3>Price</h3>
+    <span class="price" style="font-size:16px;">{{ page.price | default: "POA" }}</span>
+    {% if page.price_note %}<p>{{ page.price_note }}</p>{% elsif page.price == nil %}<p>Every business's tools and workflow are a little different, so this is quoted after a short, free discovery call.</p>{% endif %}
+    <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}?service={{ page.title | url_encode }}">Enquire about this &raquo;</a>
+  {% endif %}
+</div>

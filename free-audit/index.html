@@ -1,0 +1,57 @@
+---
+title: Free Admin Time Audit
+description: A free, no-obligation review of where your team's admin hours are really going, with three suggested quick wins.
+crumbs: []
+notice: false
+---
+<div class="hero">
+  <h2>Where is your team's time actually going?</h2>
+  <p>
+    The Admin Time Audit is a free, 20-minute review of your current admin workload. We look at where the
+    repetitive work sits &mdash; invoicing, inbox, scheduling, data entry &mdash; and come back with three
+    concrete quick wins you could automate first. No obligation to buy anything afterwards.
+  </p>
+</div>
+
+<div class="card-grid">
+  <div class="card">
+    <h3>What you get</h3>
+    <ul>
+      <li>A 20-minute call to walk through your current tools and workflow</li>
+      <li>A short written summary of where your team's admin hours are going</li>
+      <li>Three suggested automations, ranked by time saved vs. effort to set up</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>What it isn't</h3>
+    <ul>
+      <li>Not a sales call in disguise &mdash; there's no obligation to book anything afterwards</li>
+      <li>Not a generic report &mdash; it's based on your actual tools and workflow</li>
+      <li>Not a long commitment &mdash; twenty minutes, once</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section-title">CLAIM YOUR FREE AUDIT</div>
+<form class="panel-form" style="margin-top:10px;" action="https://formspree.io/f/{{ site.formspree_id }}" method="POST">
+  <input type="hidden" name="_subject" value="New Admin Time Audit request">
+  <input type="hidden" name="form_source" value="free-audit-landing-page">
+  <input type="hidden" name="_next" value="{{ site.url }}{{ '/thank-you/' | relative_url }}">
+  <label for="fa-name">Name</label>
+  <input type="text" id="fa-name" name="name" required>
+
+  <label for="fa-email">Email</label>
+  <input type="email" id="fa-email" name="email" required>
+
+  <label for="fa-business">Business name</label>
+  <input type="text" id="fa-business" name="business">
+
+  <label for="fa-tools">What do you currently use for invoicing/admin? <span class="hint">(optional, helps us prep)</span></label>
+  <input type="text" id="fa-tools" name="current_tools" placeholder="e.g. Xero, Gmail, a spreadsheet...">
+
+  <button type="submit" class="btn btn-primary">Claim my free audit &raquo;</button>
+</form>
+
+<div class="note-box">
+  <strong>Note:</strong> We'll reply within one working day to arrange a time that suits you.
+</div>
