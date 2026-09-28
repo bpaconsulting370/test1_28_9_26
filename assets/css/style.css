@@ -192,9 +192,11 @@ a:hover{color:var(--accent);}
   font-size:12px;
   padding:5px 12px;
   display:flex;
-  justify-content:space-between;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
   flex-wrap:wrap;
-  gap:6px;
+  gap:6px 14px;
   border-bottom:1px solid #06122f;
 }
 .topstrip a{color:#dbe6ff;text-decoration:none;margin-left:10px;padding:2px 6px;}
