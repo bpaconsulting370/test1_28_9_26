@@ -5,7 +5,7 @@ description: >-
 lang: en-GB
 
 # --- Fill these in once you know them (see README.md) ---
-url: "https://bpaconsulting370.github.io/test1_28_9_26"                    # e.g. "https://yourusername.github.io"  (no trailing slash)
+url: "https://bpaconsulting370.github.io"                    # e.g. "https://yourusername.github.io"  (no trailing slash)
 baseurl: "/test1_28_9_26"                # e.g. "/your-repo-name" — leave blank for a USERNAME.github.io root repo, or a custom domain
 goatcounter_code: "YOUR-CODE"     # from https://www.goatcounter.com — your site is https://YOUR-CODE.goatcounter.com
 formspree_id: "YOUR-FORM-ID"      # from https://formspree.io — used by the contact and notify-me forms
