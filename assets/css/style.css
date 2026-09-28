@@ -326,7 +326,11 @@ nav.mainnav a[aria-current="page"]{
   border:1px solid rgba(0,0,0,0.35);
   letter-spacing:0.6px;
 }
-.notice-bar marquee{color:var(--heading);}
+.notice-bar marquee{
+  flex: 1 1 auto;      /* fill remaining space */
+  min-width: 0;        /* allow flex item to shrink properly */
+  color: var(--heading);
+}
 
 /* ---------- breadcrumb ---------- */
 .breadcrumb{
